@@ -11,3 +11,10 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install
           - npm test
+  branches:
+    master:
+      - step:
+          script:
+            - npm install
+            - npm test
+            - ./deploy.sh
